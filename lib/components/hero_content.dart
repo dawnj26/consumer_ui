@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../screens/add_screen.dart';
+
 class ProductHighlight extends StatelessWidget {
   const ProductHighlight({super.key});
 
@@ -80,7 +82,15 @@ class ProductDetails extends StatelessWidget {
                 backgroundColor: Colors.white,
                 elevation: 0,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) {
+                      return const AddScreen();
+                    },
+                  ),
+                );
+              },
               child: const Row(
                 children: [
                   Icon(

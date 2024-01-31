@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 
 import '../components/categories.dart';
 import '../components/hero_content.dart';
+import '../components/product_footer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: const Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -32,6 +33,7 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w300,
+                color: Color(0xff4b2d17),
               ),
             ),
             Gap(8.0),
@@ -40,12 +42,15 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.w600,
+                color: Color(0xff4b2d17),
               ),
             ),
             Gap(20.0),
             Categories(),
-            Gap(40.0),
+            Spacer(),
             ProductHighlight(),
+            Spacer(),
+            ProductFooter(),
           ],
         ),
       ),
